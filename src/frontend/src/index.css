@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Figtree", sans-serif;
+    --font-body: "GeneralSans", sans-serif;
+    --font-mono: "GeistMono", monospace;
+    --radius: 0.75rem;
+
+    --background: 0.12 0 0;
+    --foreground: 0.98 0 0;
+    --card: 0.16 0 0;
+    --card-foreground: 0.98 0 0;
+    --popover: 0.2 0 0;
+    --popover-foreground: 0.98 0 0;
+
+    --primary: 0.72 0.21 35;
+    --primary-foreground: 0.12 0 0;
+
+    --secondary: 0.68 0.19 60;
+    --secondary-foreground: 0.12 0 0;
+    --muted: 0.25 0 0;
+    --muted-foreground: 0.72 0 0;
+
+    --accent: 0.65 0.22 280;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.22 0 0;
+    --input: 0.22 0 0;
+    --ring: 0.72 0.21 35;
+
+    --chart-1: 0.72 0.21 35;
+    --chart-2: 0.68 0.19 60;
+    --chart-3: 0.65 0.2 90;
+    --chart-4: 0.62 0.18 130;
+    --chart-5: 0.7 0.19 200;
+
+    --sidebar: 0.16 0 0;
+    --sidebar-foreground: 0.98 0 0;
+    --sidebar-primary: 0.72 0.21 35;
+    --sidebar-primary-foreground: 0.12 0 0;
+    --sidebar-accent: 0.65 0.22 280;
+    --sidebar-accent-foreground: 0.98 0 0;
+    --sidebar-border: 0.22 0 0;
+    --sidebar-ring: 0.72 0.21 35;
+
+    --candy-red: 0.72 0.21 35;
+    --candy-orange: 0.68 0.19 60;
+    --candy-yellow: 0.65 0.2 90;
+    --candy-green: 0.62 0.18 130;
+    --candy-blue: 0.7 0.19 200;
+    --candy-purple: 0.65 0.22 280;
+
+    --board-bg: 0.18 0.02 270;
+    --board-cell-bg: 0.15 0.01 270;
+  }
+
+  .dark {
+    --background: 0.12 0 0;
+    --foreground: 0.98 0 0;
+    --card: 0.16 0 0;
+    --card-foreground: 0.98 0 0;
+    --popover: 0.2 0 0;
+    --popover-foreground: 0.98 0 0;
+
+    --primary: 0.72 0.21 35;
+    --primary-foreground: 0.12 0 0;
+
+    --secondary: 0.68 0.19 60;
+    --secondary-foreground: 0.12 0 0;
+    --muted: 0.25 0 0;
+    --muted-foreground: 0.72 0 0;
+
+    --accent: 0.65 0.22 280;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.22 0 0;
+    --input: 0.22 0 0;
+    --ring: 0.72 0.21 35;
+
+    --chart-1: 0.72 0.21 35;
+    --chart-2: 0.68 0.19 60;
+    --chart-3: 0.65 0.2 90;
+    --chart-4: 0.62 0.18 130;
+    --chart-5: 0.7 0.19 200;
+
+    --sidebar: 0.16 0 0;
+    --sidebar-foreground: 0.98 0 0;
+    --sidebar-primary: 0.72 0.21 35;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.65 0.22 280;
+    --sidebar-accent-foreground: 0.98 0 0;
+    --sidebar-border: 0.22 0 0;
+    --sidebar-ring: 0.72 0.21 35;
+
+    --candy-red: 0.72 0.21 35;
+    --candy-orange: 0.68 0.19 60;
+    --candy-yellow: 0.65 0.2 90;
+    --candy-green: 0.62 0.18 130;
+    --candy-blue: 0.7 0.19 200;
+    --candy-purple: 0.65 0.22 280;
+
+    --board-bg: 0.18 0.02 270;
+    --board-cell-bg: 0.15 0.01 270;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @font-face {
+    font-family: "Figtree";
+    src: url("/assets/fonts/Figtree.woff2") format("woff2");
+    font-weight: 400 700;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "GeneralSans";
+    src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+    font-weight: 400 700;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "GeistMono";
+    src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+    font-weight: 400 500;
+    font-display: swap;
+  }
+
+  .candy-red {
+    @apply bg-[oklch(var(--candy-red))];
+  }
+
+  .candy-orange {
+    @apply bg-[oklch(var(--candy-orange))];
+  }
+
+  .candy-yellow {
+    @apply bg-[oklch(var(--candy-yellow))];
+  }
+
+  .candy-green {
+    @apply bg-[oklch(var(--candy-green))];
+  }
+
+  .candy-blue {
+    @apply bg-[oklch(var(--candy-blue))];
+  }
+
+  .candy-purple {
+    @apply bg-[oklch(var(--candy-purple))];
+  }
+
+  /* Match pop — scale up then vanish */
+  .animate-match-pop {
+    animation: match-pop 0.35s ease-out forwards;
+  }
+  @keyframes match-pop {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    40% {
+      transform: scale(1.25);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+  }
+
+  /* Swap wiggle */
+  .animate-swap {
+    animation: candy-swap 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @keyframes candy-swap {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.12);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Invalid shake */
+  .animate-shake {
+    animation: candy-shake 0.4s ease-in-out;
+  }
+  @keyframes candy-shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-6px);
+    }
+    40% {
+      transform: translateX(6px);
+    }
+    60% {
+      transform: translateX(-4px);
+    }
+    80% {
+      transform: translateX(4px);
+    }
+  }
+
+  /* Cascade fall-in */
+  .animate-cascade {
+    animation: candy-cascade 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  @keyframes candy-cascade {
+    0% {
+      transform: translateY(-32px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

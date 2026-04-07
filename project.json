@@ -1,0 +1,22 @@
+{
+  "overview": "A colorful Candy Crush-style match-3 puzzle game with an 8x8 grid, cascading candy mechanics, score tracking, and move limits — built for fun single-player sessions.",
+  "features": [
+    "8x8 candy grid with 6 colors",
+    "Swap adjacent candies to make matches of 3 or more",
+    "Cascading gravity fills gaps automatically",
+    "Chain reaction detection for combos",
+    "30-move limit per game with score tracking",
+    "Smooth animations for swaps, clears, and drops",
+    "Game over overlay with final score",
+    "Restart button to play again"
+  ],
+  "category": "game",
+  "tags": [
+    "game",
+    "puzzle",
+    "match-3",
+    "candy-crush",
+    "casual"
+  ],
+  "last_updated": "2026-04-07T17:33:27.739Z"
+}
